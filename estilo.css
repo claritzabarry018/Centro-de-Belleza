@@ -1,0 +1,68 @@
+/* === Parte de Yoandry: tabla de productos === */
+.catalogo-productos {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.catalogo-productos h1 {
+  color: #70464c;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.catalogo-productos > p {
+  color: #5f5555;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.tabla-productos-contenedor {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(70, 45, 45, 0.12);
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.tabla-productos th {
+  background-color: #81575c;
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+}
+
+.tabla-productos td {
+  padding: 15px;
+  border-bottom: 1px solid #eadfdf;
+}
+
+.tabla-productos tbody tr:nth-child(even) {
+  background-color: #fbf5f3;
+}
+
+.tabla-productos tbody tr:hover {
+  background-color: #f4e8e4;
+}
+
+.tabla-productos td:last-child {
+  color: #70464c;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .catalogo-productos {
+    margin: 24px auto;
+    padding: 14px;
+  }
+
+  .tabla-productos th,
+  .tabla-productos td {
+    padding: 10px;
+  }
+}
