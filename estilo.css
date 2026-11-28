@@ -1,68 +1,151 @@
-/* === Parte de Yoandry: tabla de productos === */
-.catalogo-productos {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 24px;
+/* === INTEGRANTE 5: estructura y estilos generales === */
+
+/* Colores y medidas base */
+:root {
+  --color-principal: #89545a;
+  --color-oscuro: #553b3e;
+  --color-fondo: #fffaf8;
+  --color-texto: #3e3535;
+  --color-claro: #ffffff;
+  --color-detalle: #dfb579;
 }
 
-.catalogo-productos h1 {
-  color: #70464c;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Logo */
+header {
+  padding: 18px 20px 8px;
   text-align: center;
-  margin-bottom: 8px;
 }
 
-.catalogo-productos > p {
-  color: #5f5555;
+header img {
+  display: inline-block;
+  width: 145px;
+  max-width: 40vw;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Nombre del centro y eslogan, ubicados después de header en tu HTML */
+body > h1 {
+  margin: 4px 16px 0;
+  color: var(--color-principal);
   text-align: center;
-  margin-bottom: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
 }
 
-.tabla-productos-contenedor {
-  overflow-x: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(70, 45, 45, 0.12);
+body > p {
+  margin: 4px 16px 22px;
+  color: var(--color-oscuro);
+  text-align: center;
+  font-style: italic;
 }
 
-.tabla-productos {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
+/* Menú de navegación */
+nav {
+  background-color: var(--color-principal);
 }
 
-.tabla-productos th {
-  background-color: #81575c;
-  color: #fff;
-  padding: 15px;
-  text-align: left;
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+  padding: 10px 16px;
+  list-style: none;
 }
 
-.tabla-productos td {
-  padding: 15px;
-  border-bottom: 1px solid #eadfdf;
-}
-
-.tabla-productos tbody tr:nth-child(even) {
-  background-color: #fbf5f3;
-}
-
-.tabla-productos tbody tr:hover {
-  background-color: #f4e8e4;
-}
-
-.tabla-productos td:last-child {
-  color: #70464c;
+nav a {
+  display: block;
+  padding: 9px 15px;
+  border-radius: 20px;
+  color: var(--color-claro);
   font-weight: bold;
-  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+nav a:hover,
+nav a:focus-visible {
+  background-color: var(--color-detalle);
+  color: var(--color-oscuro);
+}
+
+/* Imágenes, incluido el banner principal */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body > img {
+  display: block;
+  width: min(1100px, calc(100% - 32px));
+  max-height: 480px;
+  margin: 28px auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Espaciado general del contenido */
+section {
+  width: min(1000px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 42px;
+  padding: 28px 20px;
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
+  text-align: center;
+}
+
+footer h3 {
+  margin-top: 0;
+  color: var(--color-detalle);
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+footer a {
+  display: inline-block;
+  margin: 4px 8px;
+  color: var(--color-claro);
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: var(--color-detalle);
+}
+
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
-  .catalogo-productos {
-    margin: 24px auto;
-    padding: 14px;
+  nav ul {
+    gap: 2px;
+    padding-inline: 8px;
   }
 
-  .tabla-productos th,
-  .tabla-productos td {
-    padding: 10px;
+  nav a {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  body > img {
+    max-height: 300px;
   }
 }
